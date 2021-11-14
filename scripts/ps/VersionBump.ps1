@@ -2,7 +2,7 @@
 param(
   [Parameter(Mandatory=$true)]
   [string]$VersionJsonFile,
-  [bool]$isPreRelease = $true
+  [bool]$IsPreRelease = $true
 )
 
 Write-Host "Current Version "
