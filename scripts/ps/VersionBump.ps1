@@ -15,10 +15,10 @@ Write-Host "$currentVersion"
 
 
 $preReleaseTag = ''
-$buildNumber = "{0}{1}" -f [DateTime]::Now.DayOfYear, [DateTime]::Now.ToString("yy")
+$buildNumber = "{0:000}{1}" -f [DateTime]::Now.DayOfYear, [DateTime]::Now.ToString("yy")
 
 if($isPreRelease) {
-    $preReleaseTag = "-preview-$buildNumber"
+    $preReleaseTag = "-preview.$buildNumber"
 }
 
 Write-Host "New Version String :"($currentVersionString = "{0}.{1}.{2}" -f $currentVersion.major, $currentVersion.minor, $currentVersion.patch)
